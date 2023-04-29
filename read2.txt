@@ -1,0 +1,37 @@
+Running installer check [this test checks for installing the iqdvt correctly]: Pass
+
+Running help flag check [this test checks for the '--help' flag]: Pass
+
+Running Flow File [DEMO_Flow.flow this flow contain 3 tests of 11.ac TX, the 1st contatint iterates over certain parmas and the other 2 are just single runs]:	Failed
+
+  1. 802.11ac Transmitter Test:  BAND 2.4G                                                                      PASS
+    Channel           |  Coding Type       |  Data Rate         |  TX Ant            |  BW [MHz]          |
+    1                 |  BCC               |  MCS0              |  1                 |  20                |     PASS
+    6                 |  BCC               |  MCS0              |  1                 |  20                |     PASS
+  2. 802.11ac Transmitter Test:  BAND 2.4G Channel : 1                                                          PASS
+    Data Rate         |  TX Ant            |
+    MCS0              |  1                 |                                                                    PASS
+    MCS0              |  2                 |                                                                    PASS
+    MCS7              |  1                 |                                                                    PASS
+    MCS7              |  2                 |                                                                    PASS
+
+  3. 802.11ax Transmitter Test:  BAND 2.4G Channel : 1                                                          PASS
+    Data Rate         |  TX Ant            |
+    MCS1              |  1                 |                                                                    PASS
+    MCS1              |  2                 |                                                                    PASS
+    MCS6              |  1                 |                                                                    PASS
+    MCS6              |  2                 |                                                                    PASS
+
+  4. 802.11ac Receiver Test:  BAND 2.4G Channel : 1                                                             PASS
+    RX Ant            |
+    1                 |                                                                                         PASS
+    2                 |                                                                                         PASS
+
+  5. 802.11ax Receiver Test:  BAND 2.4G Channel : 1                                                             PASS
+    RX Ant            |
+    1                 |                                                                                         PASS
+    2                 |  
+ 
+ 
+
+Running Uninstaller check [this test checks for uninstalling the iqdvt correctly]: Pass

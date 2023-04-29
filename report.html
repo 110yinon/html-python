@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.sTitle{ color:green }
+.fTitle{ color:red }
+.inner1{ display:none }
+.inner2{ display:none }
+.linePass{ background-color:green }
+.lineFail{ background-color:red }
+.cellNeutral{ background-color:white }
+.separator{ border-bottom: 1pt solid black; height:15px; }
+</style>
+<script>
+function expand(id,amount)
+{
+	var imag = document.getElementById('expand'+id);
+	imag.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAJUlEQVQYlWNoaGj4TyxmaGho+P/582eCeDAqxuexwepmohUTiwFalZHRhPjybwAAAABJRU5ErkJggg==";
+	imag.setAttribute( "onClick", "javascript:shrink('"+id+"',"+amount+");" );
+	for (i = 1; i <= amount; i++)
+	{
+		var subHeader = document.getElementById('test'+id+'_'+i);
+		subHeader.style.display = 'contents';
+	}
+}
+function shrink(id,amount)
+{
+	var imag = document.getElementById('expand'+id);
+	imag.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC";
+	imag.setAttribute( "onClick", "javascript:expand('"+id+"',"+amount+");" );
+	for (i = 1; i <= amount; i++)
+	{
+		var subHeader = document.getElementById('test'+id+'_'+i);
+		subHeader.style.display = 'none';
+		var subIndex = 1;
+		var subTable = document.getElementById('test'+id+'_'+i+'_'+subIndex);
+		while (subTable)
+		{
+			var innerImag = document.getElementById('expand'+id+'_'+i);
+			innerImag.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC";
+			innerImag.setAttribute( "onClick", "javascript:expand('"+id+'_'+i+"',"+amount+");" );
+			subIndex++;
+			subTable.style.display = 'none';
+			subTable = document.getElementById('test'+id+'_'+i+'_'+subIndex);
+		}
+	}
+}
+</script>
+	</head><body>
+<TABLE width="50%"cellpadding = "5" cellspacing = "0" border="solid black 1px">
+<TBODY>
+<TR>
+<TH colspan = "7">IQTestAPI Unit Test Report</TH>
+</TR>
+</TBODY>
+<TBODY>
+<TR class="fTitle"><TH><div align="left"><img id="expand24045" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand(24045,14)"/></div></TH><TH colspan = "5" >BT: Test time 86 seconds
+</TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_1" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_1',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :0 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_1_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>197</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.6147</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>168</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>170</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.6119</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>164</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>211</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.6108</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>161</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>240</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.6137</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>178</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>218</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.6123</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>144</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>245</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.6066</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>233</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>211</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.6154</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>215</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>232</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.6063</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>193</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>222</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.61</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>209</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>212</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.614</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>144</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_2" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_2',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :1 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_2_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>190</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.6089</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>132</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>228</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.6087</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>143</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>196</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.6092</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>129</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>277</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.611</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>173</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>197</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.6087</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>236</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>164</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.606</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>168</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>213</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.6107</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>177</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>187</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.609</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>141</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>313</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.6092</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>200</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>203</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.6091</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>179</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_3" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_3',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :2 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_3_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>207</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.6089</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>138</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>206</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.6095</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>185</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>188</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.6095</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>144</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>262</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.6063</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>192</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>202</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.6057</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>166</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>221</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.6068</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>196</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>219</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.6062</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>176</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>200</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.6088</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>112</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>250</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.6052</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>179</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>136</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.6063</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>Classic</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>181</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_4" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_4',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :3 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_4_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>143</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.6296</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>132</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>236</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.6275</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>179</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>209</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.6314</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>117</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>261</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.6273</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>174</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>149</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.6247</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>181</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>186</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.6303</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>167</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>199</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.6257</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>108</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>191</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.6241</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>131</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>172</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.6284</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>144</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>203</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.6275</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>189</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_5" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_5" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_5',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :4 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_5_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>139</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.6175</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>119</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>219</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.6171</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>114</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>271</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.6137</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>177</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>182</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.6166</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>153</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>303</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.616</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>139</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>301</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.617</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>156</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>302</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.619</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>186</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>203</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.615</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>136</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>246</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.6166</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>126</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>215</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.6212</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>266</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_6" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_6" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_6',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :5 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_6_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>186</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.6146</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>225</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>216</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.6141</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>182</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>232</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.6124</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>205</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>245</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.6166</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>194</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>194</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.6159</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>128</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>246</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.6177</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>120</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>231</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.6179</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>112</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>226</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.6174</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>167</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>227</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.615</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>192</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>191</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.6172</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>2-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>161</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_7" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_7" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_7',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :6 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_7_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>187</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.6272</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>143</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>232</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.6251</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>145</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>215</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.6231</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>160</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>224</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.6235</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>195</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>151</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.6297</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>128</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>183</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.6273</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>183</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>146</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.6228</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>129</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>190</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.6273</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>114</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>184</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.6282</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>159</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>205</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.626</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH1</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>127</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_8" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_8',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :7 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_8_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>197</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.6116</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>137</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>207</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.6134</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>190</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>196</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.6117</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>117</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>250</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.6141</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>175</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>201</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.6154</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>182</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>209</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.6129</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>187</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>134</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.6132</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>143</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>261</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.6116</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>173</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>183</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.6136</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>175</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>140</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.614</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH3</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>165</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_9" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_9" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_9',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :8 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_9_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>159</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.615</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>160</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>210</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.6121</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>138</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>182</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.6114</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>115</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>244</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.6136</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>169</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>177</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.6105</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>167</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>175</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.6121</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>174</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>170</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.6089</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>159</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>177</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.613</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>166</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>178</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.6131</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>175</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>186</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.6163</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>EDR 3Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>3-DH5</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>171</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_10" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_10" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_10',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :9 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_10_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>137</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.5801</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>200</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>221</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.5801</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>145</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>184</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.5823</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>158</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>164</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.5821</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>179</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>163</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.582</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>168</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>164</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.5816</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>145</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>147</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.581</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>137</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>201</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.5821</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>151</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>196</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.5827</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>201</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>101</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.5794</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>202</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_11" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_11" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_11',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :10 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_11_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>162</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.5802</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>177</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>173</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.5856</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>128</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>203</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.5819</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>166</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>180</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.5833</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>300</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>192</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.5821</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>171</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>386</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.583</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>259</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>205</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.58</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>114</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>214</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.5836</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>151</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>125</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.5821</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>138</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>200</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.5838</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>LE 1Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>147</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_12" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_12',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :11 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_12_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>143</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.5597</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>138</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>139</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.5606</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>171</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>135</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.5591</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>156</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>178</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.5599</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>153</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>148</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.5566</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>123</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>153</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.5576</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>134</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>156</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.5576</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>134</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>134</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.5577</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>128</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>164</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.5589</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>127</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>127</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.5586</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>LE 2Mbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>143</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_13" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_13',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :12 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_13_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>295</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.5715</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>290</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>284</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.5723</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>275</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>278</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.5699</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>238</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>333</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.5735</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>281</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>286</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.5725</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>263</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>268</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.5705</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>293</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>281</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.5711</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>312</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>291</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.5696</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>251</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>247</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.571</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>270</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>298</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.5707</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>LE 125kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>282</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+<TBODY id="test24045_14" class="inner1">
+<TR class="fTitle"><TH/><TH><div align="left"><img id="expand24045_14" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAKklEQVQYlWNoaGj4TyxmaGho+P/582eCGKdiXGJ0UIzPY4PVzUSHM7EYAITNibsX4gt+AAAAAElFTkSuQmCC" onclick="expand('24045_14',1)"/></TH><TH colspan = "4">Frequency: 2448.00MHz  Power: -30.00dBm  DataRate :13 </TH><TH><div align="left">Fail</div></TH></TR>
+</TBODY>
+<TBODY id="test24045_14_1" class="inner2">
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec)</TD><TD>145</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_POWER_DBM</TD><TD>-30.5705</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>BT_PACKET_TYPE</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>1</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>159</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec)</TD><TD>146</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_POWER_DBM</TD><TD>-30.5719</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>BT_PACKET_TYPE</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>2</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>159</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec)</TD><TD>188</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_POWER_DBM</TD><TD>-30.5708</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>BT_PACKET_TYPE</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>3</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>171</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec)</TD><TD>142</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_POWER_DBM</TD><TD>-30.5708</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>BT_PACKET_TYPE</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>4</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>139</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec)</TD><TD>216</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_POWER_DBM</TD><TD>-30.5717</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>BT_PACKET_TYPE</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>5</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>183</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec)</TD><TD>182</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_POWER_DBM</TD><TD>-30.5744</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>BT_PACKET_TYPE</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>6</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>169</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec)</TD><TD>186</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_POWER_DBM</TD><TD>-30.57</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>BT_PACKET_TYPE</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>7</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>180</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec)</TD><TD>179</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_POWER_DBM</TD><TD>-30.5699</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>BT_PACKET_TYPE</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>8</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>171</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec)</TD><TD>180</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_POWER_DBM</TD><TD>-30.5718</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>BT_PACKET_TYPE</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>9</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>187</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec)</TD><TD>144</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="lineFail"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_POWER_DBM</TD><TD>-30.5697</TD><TD>[-30.50,-29.50]</TD><TD><div align="left">Fail</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_DATA_RATE_NAME</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>BT_PACKET_TYPE</TD><TD>LE 500kbps</TD><TD>[,]</TD><TD><div align="left">Pass</div></TD></TR>
+<TR class="linePass"><TD class="cellNeutral"  colspan="2"/><TD>10</TD><TD>Test Time (mSec) - 'Cache enabled'</TD><TD>176</TD><TD>[0,1000]</TD><TD><div align="left">Pass</div></TD></TR>
+</TBODY>
+</TABLE>
+</body>
+</html>
