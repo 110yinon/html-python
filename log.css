@@ -43,10 +43,17 @@
     grid-column: span 5;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    /* border: 1px solid black; */
 }
 .category, .value{
     text-align: center;
 }
 .sub-test-verdict{
     grid-column: 6;
+}
+.pass{
+    background-color: lightgreen;
+}
+.failed{
+    background-color: lightcoral;
 }

@@ -116,7 +116,8 @@ for row in rows:
                         ]
                         # end of a values row
                         if(value == 'PASS' or value == 'FAILED'):
-                            valuesRows +=  [div(class_='iterate-values', style=gridStyle)[*valuesRow]]                         
+                            passOrFailedClass = 'pass' if value == 'PASS' else 'failed'
+                            valuesRows +=  [div(class_=f'iterate-values {passOrFailedClass}', style=gridStyle)[*valuesRow]]                         
                 
 
 
