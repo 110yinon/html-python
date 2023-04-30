@@ -35,14 +35,14 @@
     grid-column: span 5;
     background-color: lightsalmon;
 }
-.sub-test-name, .iterates-categories, .iterates-values{
+.sub-test-name, .iterates-categories, .iterate-values{
     padding-left: 20px;
 }
 .iterates-categories, .iterate-values{
     font-size: 0.9em;    
     grid-column: span 5;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 .category, .value{
     text-align: center;
