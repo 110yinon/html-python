@@ -47,7 +47,13 @@ for row in rows:
             subTestContent = []
             subTestHead = []
             categoriesContent = []
-            valuesContent = []
+            valuesRows = []
+
+            # determine how much cols will be in the .iterates-categories, .iterate-values div's
+            # default will be 6
+            DEFAULT_GRID_COLS = 6
+            gridColsNum = DEFAULT_GRID_COLS
+
 
             # split the subTest paragrph into rows
             subTestRows = subTest.split('\n')
@@ -59,7 +65,7 @@ for row in rows:
 
                 testHeaderRow = isVerdict and not isVerticalBar
                 testCategoriesRow = isVerdict is False and isVerticalBar
-                testValuesRow = isVerdict is True and isVerticalBar
+                istestValuesRow = isVerdict is True and isVerticalBar
                 
                 if testHeaderRow:
                     # print(f'x--Header-- {row}')
@@ -74,38 +80,49 @@ for row in rows:
                     # print(f'x--CAT-- {row}')
                     # seperates the categories in the row
                     categories = row.split('|')
-                    
+                    # determine how much columns will be in the current subTest .iterates-categories, .iterate-values div's
+                    # the default is 6 - so if the no. cats will be greater so grid col num will be change
+                    # numOfCats = categories.__len__()
+                    # gridColsNum = numOfCats + 1 if numOfCats > DEFAULT_GRID_COLS else DEFAULT_GRID_COLS
                     for cat in categories:
                         catName = cat.strip()
                         categoriesContent += [
                                 div(class_='category')[catName]
                         ]
 
-                if testValuesRow:
+                if istestValuesRow:
                     # print(f'x--VAL-- {row}')
                     # seperates the values in the row
                     values = row.split('|')
+                    valuesRow = []
                     
                     for val in values:
-                        valuesContent += [
-                                div(class_='value')[val.strip()]
-                        ] 
+                        value = val.strip()
+                        isVerdictValue =  value == 'PASS' or value == 'FAILED'
+                        className = 'value sub-test-verdict' if isVerdictValue else 'value'
+                        valuesRow += [
+                                div(class_=className)[value]
+                        ]
+                        # end of a values row
+                        if(value == 'PASS' or value == 'FAILED'):
+                            valuesRows +=  [div(class_='iterate-values')[*valuesRow]]                         
+                
 
 
-                subTestContent = [
-                    div(class_='sub-test')[
-                        *subTestHead,
-                        div(class_='iterates-categories')[*categoriesContent],
-                        div(class_='iterate-values')[*valuesContent]
-                    ]
+            subTestContent = [
+                div(class_='sub-test')[
+                    *subTestHead,
+                    div(class_='iterates-categories')[*categoriesContent],
+                    *valuesRows
                 ]
-                summaryContent += [*subTestContent]
+            ]
+            summaryContent += [*subTestContent]
 
-                subTestHead=[]
-                categoriesContent=[]
-                valuesContent=[]
-                subTestContent = []
-                continue
+            subTestHead=[]
+            categoriesContent=[]
+            valuesRows = []
+            subTestContent = []
+            continue
 
         
         content += [div(class_='flow-test')[

@@ -47,3 +47,6 @@
 .category, .value{
     text-align: center;
 }
+.sub-test-verdict{
+    grid-column: 6;
+}
