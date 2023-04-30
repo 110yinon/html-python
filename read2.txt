@@ -4,7 +4,7 @@ Running help flag check [this test checks for the '--help' flag]: Pass
 
 Running Flow File [DEMO_Flow.flow this flow contain 3 tests of 11.ac TX, the 1st contatint iterates over certain parmas and the other 2 are just single runs]:	Failed
 
-  1. 802.11ac Transmitter Test:  BAND 2.4G                                                                      PASS
+  1. 802.11ac Transmitter Test:  BAND 2.4G                                                                      FAILED
     Channel           |  Coding Type       |  Data Rate         |  TX Ant            |  BW [MHz]          |  Data Rate         |  TX Ant            |
     1                 |  BCC               |  MCS0              |  1                 |  20                |     MCS0           |    1               |     PASS
     6                 |  BCC               |  MCS0              |  1                 |  20                |     MCS55          |    2               |     FAILED

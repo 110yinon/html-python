@@ -73,9 +73,10 @@ for row in rows:
                     # print(f'x--Header-- {row}')
                     rowVerdict = 'PASS' if 'PASS' in row else 'FAILED'
                     subTestName = row.split(rowVerdict)[0]
+                    passOrFailedClass = 'pass' if rowVerdict == 'PASS' else 'failed'
                     subTestHead = [                        
                         div(class_='sub-test-name')[subTestName],
-                        div(class_='verdict')[rowVerdict]                        
+                        div(class_=f'verdict {passOrFailedClass}')[rowVerdict]                        
                     ]
 
                 if testCategoriesRow:
