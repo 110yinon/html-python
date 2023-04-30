@@ -53,6 +53,8 @@ for row in rows:
             # default will be 6
             DEFAULT_GRID_COLS = 6
             gridColsNum = DEFAULT_GRID_COLS
+            gridStyle = ''
+            verdictValueStyle = ''
 
 
             # split the subTest paragrph into rows
@@ -82,8 +84,17 @@ for row in rows:
                     categories = row.split('|')
                     # determine how much columns will be in the current subTest .iterates-categories, .iterate-values div's
                     # the default is 6 - so if the no. cats will be greater so grid col num will be change
-                    # numOfCats = categories.__len__()
-                    # gridColsNum = numOfCats + 1 if numOfCats > DEFAULT_GRID_COLS else DEFAULT_GRID_COLS
+                    numOfCats = categories.__len__()
+                    gridColsNum = numOfCats if numOfCats > DEFAULT_GRID_COLS else DEFAULT_GRID_COLS
+                    gridStyle = (
+                        f'grid-template-columns: repeat({gridColsNum}, 1fr);'
+                        # f'background-color:red'
+                    )
+                    verdictValueStyle=(
+                        f'grid-column: {gridColsNum};'
+                        # f'background-color:red'
+                    )
+
                     for cat in categories:
                         catName = cat.strip()
                         categoriesContent += [
@@ -101,18 +112,18 @@ for row in rows:
                         isVerdictValue =  value == 'PASS' or value == 'FAILED'
                         className = 'value sub-test-verdict' if isVerdictValue else 'value'
                         valuesRow += [
-                                div(class_=className)[value]
+                                div(class_=className, style=verdictValueStyle if isVerdictValue else '')[value]
                         ]
                         # end of a values row
                         if(value == 'PASS' or value == 'FAILED'):
-                            valuesRows +=  [div(class_='iterate-values')[*valuesRow]]                         
+                            valuesRows +=  [div(class_='iterate-values', style=gridStyle)[*valuesRow]]                         
                 
 
 
             subTestContent = [
                 div(class_='sub-test')[
                     *subTestHead,
-                    div(class_='iterates-categories')[*categoriesContent],
+                    div(class_='iterates-categories', style=gridStyle)[*categoriesContent],
                     *valuesRows
                 ]
             ]
