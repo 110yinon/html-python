@@ -33,6 +33,7 @@
 .verdict{
     text-align: center;
     grid-column: span 1;
+    padding: 5px;
 }
 .sub-test-name{
     grid-column: span 5;
@@ -41,6 +42,9 @@
 }
 .sub-test-name, .iterates-categories, .iterate-values{
     padding-left: 20px;
+}
+.summary-subtest{
+    grid-column: span 5;
 }
 .iterates-categories, .iterate-values{
     font-size: 0.9em;    

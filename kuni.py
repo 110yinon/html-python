@@ -127,8 +127,10 @@ for row in rows:
             subTestContent = [
                 div(class_='sub-test')[
                     *subTestHead,
-                    div(class_='iterates-categories', style=gridStyle)[*categoriesContent],
-                    *valuesRows
+                    div(class_='summary-subtest invisible')[
+                        div(class_='iterates-categories', style=gridStyle)[*categoriesContent],
+                        *valuesRows
+                    ]
                 ]
             ]
             summaryContent += [*subTestContent]
@@ -143,7 +145,7 @@ for row in rows:
         content += [div(class_='flow-test')[
                 div(class_='test-name')[testName],
                 div(class_='verdict')[verdict],
-                div(class_='summary')[
+                div(class_='summary invisible')[
                     *summaryContent
                 ]
             ]
@@ -181,7 +183,8 @@ page = html[
             div(class_='details')['LOG DEMO REPORT'],
             *content
         ]
-    ]
+    ],
+    '<script src="index.js"></script>'
 ]
 page = page.render()
 # print(page)
