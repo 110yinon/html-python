@@ -4,9 +4,11 @@ import re
 from chope import *
 from chope.css import *
 
-f = open("read2.txt", "r")
-output_ = f.read()
-# print(repr(output_))
+f = open("report.log.txt", "r")
+fileContent = f.read()
+# removing the duration string ('02.254 sec')
+output_ = re.sub(r'(\d+)(\.)*(\d*) sec','', fileContent)
+output_ = output_.replace('Duration Time:','')
 # print(output_)
 
 
