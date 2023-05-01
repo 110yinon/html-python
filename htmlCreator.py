@@ -3,6 +3,8 @@ import subprocess
 import re
 from chope import *
 from chope.css import *
+from functions.CreateSubTestNameElem import CreateSubTestNameElem
+
 
 f = open("report.log.txt", "r")
 fileContent = f.read()
@@ -73,13 +75,7 @@ for row in rows:
                 
                 if testHeaderRow:
                     # print(f'x--Header-- {row}')
-                    rowVerdict = 'PASS' if 'PASS' in row else 'FAILED'
-                    subTestName = row.split(rowVerdict)[0]
-                    passOrFailedClass = 'pass' if rowVerdict == 'PASS' else 'failed'
-                    subTestHead = [                        
-                        div(class_='sub-test-name')[subTestName],
-                        div(class_=f'verdict {passOrFailedClass}')[rowVerdict]                        
-                    ]
+                    subTestHead = CreateSubTestNameElem(row)
 
                 if testCategoriesRow:
                     # print(f'x--CAT-- {row}')
