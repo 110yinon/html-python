@@ -2,30 +2,33 @@
     text-align: center;
     background-color: lightskyblue;
     padding: 10px;
+    border-bottom: 1px solid black;
 }
 .log{
     max-width: 550px;
     border: 1px solid black;
-    background-color: antiquewhite;
+    background-color: #d7d7d7;
     margin: 0px auto;    
 }
 .test{
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    border: 1px solid black;
     grid-column: span 5;    
 }
 .flow-test, .summary, .sub-test{
     display: grid;
-    grid-template-columns: repeat(6,1fr);    
+    grid-template-columns: repeat(6,1fr);   
+    cursor: pointer; 
 }
 .summary, .sub-test{
     grid-column:  span 6;
 }
 .test-name{    
     grid-column: span 5;
-    background-color: aqua;
+    background-color: #a9a9a9;
     padding-left: 10px;
+    border-bottom: 1px solid black;
+    padding: 5px;
 }
 .verdict{
     text-align: center;
@@ -33,7 +36,8 @@
 }
 .sub-test-name{
     grid-column: span 5;
-    background-color: lightsalmon;
+    background-color: #cecece;
+    padding: 2px 0;
 }
 .sub-test-name, .iterates-categories, .iterate-values{
     padding-left: 20px;
@@ -56,4 +60,16 @@
 }
 .failed{
     background-color: lightcoral;
+}
+.iterates-categories{
+    font-weight: 900;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.invisible{
+    display: none;
+}
+.visible{
+    display: initial;
 }
