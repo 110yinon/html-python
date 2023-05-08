@@ -7,9 +7,9 @@ from functions.CreateSubTestNameElem import CreateSubTestNameElem
 def CreateFlowSummary(flowDataString):
     summaryContent = []
     # split into sub tests
-    subTests = re.split(r" \d\. ",flowDataString)
+    subTests = re.split(r" (\d)+\. ",flowDataString)
     for subTest in subTests:
-        # print(subTest)
+        # print(f'x------{subTest}')
 
         subTestContent = []
         subTestHead = []

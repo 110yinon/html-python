@@ -28,7 +28,7 @@ content = []
 for row in rows:
     # adding back the 'Running' after remove it on split()
     row = row.replace(' ', 'Running ', 1)
-    # print(row)
+    # print(f'x-----{row}')
 
     # separate the verdict and the '[test description]'from the test name header
     testName = row.split('Pass')[0].split('Failed')[0].split('[')[0]
@@ -39,8 +39,8 @@ for row in rows:
 
         # removing the 'running ...[] false\n' (the first line)
         # adding back the '1.' after remove it on split
-        offTrailingRow = row.split(' 1.',1)[1].replace(' ', '  1. ',1)
-        # print(sara)
+        offTrailingRow = row.split(' 1.',1)[1].replace(' ', ' 1. ',1)
+        # print(offTrailingRow)
 
         # summaryContent = []
         summaryContent = CreateFlowSummary(offTrailingRow)        

@@ -1,0 +1,663 @@
+Running installer check [this test checks for installing the iqdvt correctly]: Pass
+
+Running help flag check [this test checks for the '--help' flag]: Pass
+
+Running Flow File 1 [CL6_TX_Flow.flow the flow contains both 11.ag & 11.ac tests, each iterates over certain Data-Rates, antenas and ceratin channels, either on 2.4G and 5G]:	Failed
+
+ 1. 802.11ag Transmitter Test:  BAND 2.4G                         PASS
+   TX Ant            |  Channel           |  Data Rate         |  
+   1                 |  1                 |  OFDM 6            |  PASS          
+   1                 |  1                 |  OFDM 9            |  PASS          
+   1                 |  1                 |  OFDM 12           |  PASS          
+   1                 |  1                 |  OFDM 18           |  PASS          
+   1                 |  1                 |  OFDM 24           |  PASS          
+   1                 |  1                 |  OFDM 36           |  PASS          
+   1                 |  1                 |  OFDM 48           |  PASS          
+   1                 |  1                 |  OFDM 54           |  PASS          
+   1                 |  7                 |  OFDM 6            |  PASS          
+   1                 |  7                 |  OFDM 9            |  PASS          
+   1                 |  7                 |  OFDM 12           |  PASS          
+   1                 |  7                 |  OFDM 18           |  PASS          
+   1                 |  7                 |  OFDM 24           |  PASS          
+   1                 |  7                 |  OFDM 36           |  PASS          
+   1                 |  7                 |  OFDM 48           |  PASS          
+   1                 |  7                 |  OFDM 54           |  PASS          
+   1                 |  11                |  OFDM 6            |  PASS          
+   1                 |  11                |  OFDM 9            |  PASS          
+   1                 |  11                |  OFDM 12           |  PASS          
+   1                 |  11                |  OFDM 18           |  PASS          
+   1                 |  11                |  OFDM 24           |  PASS          
+   1                 |  11                |  OFDM 36           |  PASS          
+   1                 |  11                |  OFDM 48           |  PASS          
+   1                 |  11                |  OFDM 54           |  PASS          
+   2                 |  1                 |  OFDM 6            |  PASS          
+   2                 |  1                 |  OFDM 9            |  PASS          
+   2                 |  1                 |  OFDM 12           |  PASS          
+   2                 |  1                 |  OFDM 18           |  PASS          
+   2                 |  1                 |  OFDM 24           |  PASS          
+   2                 |  1                 |  OFDM 36           |  PASS          
+   2                 |  1                 |  OFDM 48           |  PASS          
+   2                 |  1                 |  OFDM 54           |  PASS          
+   2                 |  7                 |  OFDM 6            |  PASS          
+   2                 |  7                 |  OFDM 9            |  PASS          
+   2                 |  7                 |  OFDM 12           |  PASS          
+   2                 |  7                 |  OFDM 18           |  PASS          
+   2                 |  7                 |  OFDM 24           |  PASS          
+   2                 |  7                 |  OFDM 36           |  PASS          
+   2                 |  7                 |  OFDM 48           |  PASS          
+   2                 |  7                 |  OFDM 54           |  PASS          
+   2                 |  11                |  OFDM 6            |  PASS          
+   2                 |  11                |  OFDM 9            |  PASS          
+   2                 |  11                |  OFDM 12           |  PASS          
+   2                 |  11                |  OFDM 18           |  PASS          
+   2                 |  11                |  OFDM 24           |  PASS          
+   2                 |  11                |  OFDM 36           |  PASS          
+   2                 |  11                |  OFDM 48           |  PASS          
+   2                 |  11                |  OFDM 54           |  PASS           
+ 
+ 2. 802.11ag Transmitter Test:  BAND 5G                           FAILED
+   Data Rate         |  Channel           |  TX Ant            |  
+   OFDM 6            |  36                |  1                 |  FAILED          
+   OFDM 6            |  36                |  2                 |  FAILED          
+   OFDM 6            |  64                |  1                 |  FAILED          
+   OFDM 6            |  64                |  2                 |  FAILED          
+   OFDM 6            |  100               |  1                 |  FAILED          
+   OFDM 6            |  100               |  2                 |  FAILED          
+   OFDM 6            |  124               |  1                 |  FAILED          
+   OFDM 6            |  124               |  2                 |  FAILED          
+   OFDM 6            |  149               |  1                 |  FAILED          
+   OFDM 6            |  149               |  2                 |  FAILED          
+   OFDM 6            |  161               |  1                 |  FAILED          
+   OFDM 6            |  161               |  2                 |  FAILED          
+   OFDM 9            |  36                |  1                 |  FAILED          
+   OFDM 9            |  36                |  2                 |  FAILED          
+   OFDM 9            |  64                |  1                 |  FAILED          
+   OFDM 9            |  64                |  2                 |  FAILED          
+   OFDM 9            |  100               |  1                 |  FAILED          
+   OFDM 9            |  100               |  2                 |  FAILED          
+   OFDM 9            |  124               |  1                 |  FAILED          
+   OFDM 9            |  124               |  2                 |  FAILED          
+   OFDM 9            |  149               |  1                 |  FAILED          
+   OFDM 9            |  149               |  2                 |  FAILED          
+   OFDM 9            |  161               |  1                 |  FAILED          
+   OFDM 9            |  161               |  2                 |  FAILED          
+   OFDM 12           |  36                |  1                 |  FAILED          
+   OFDM 12           |  36                |  2                 |  FAILED          
+   OFDM 12           |  64                |  1                 |  FAILED          
+   OFDM 12           |  64                |  2                 |  FAILED          
+   OFDM 12           |  100               |  1                 |  FAILED          
+   OFDM 12           |  100               |  2                 |  FAILED          
+   OFDM 12           |  124               |  1                 |  FAILED          
+   OFDM 12           |  124               |  2                 |  FAILED          
+   OFDM 12           |  149               |  1                 |  FAILED          
+   OFDM 12           |  149               |  2                 |  FAILED          
+   OFDM 12           |  161               |  1                 |  FAILED          
+   OFDM 12           |  161               |  2                 |  FAILED          
+   OFDM 18           |  36                |  1                 |  FAILED          
+   OFDM 18           |  36                |  2                 |  FAILED          
+   OFDM 18           |  64                |  1                 |  FAILED          
+   OFDM 18           |  64                |  2                 |  FAILED          
+   OFDM 18           |  100               |  1                 |  FAILED          
+   OFDM 18           |  100               |  2                 |  FAILED          
+   OFDM 18           |  124               |  1                 |  FAILED          
+   OFDM 18           |  124               |  2                 |  FAILED          
+   OFDM 18           |  149               |  1                 |  FAILED          
+   OFDM 18           |  149               |  2                 |  FAILED          
+   OFDM 18           |  161               |  1                 |  FAILED          
+   OFDM 18           |  161               |  2                 |  FAILED          
+   OFDM 24           |  36                |  1                 |  FAILED          
+   OFDM 24           |  36                |  2                 |  FAILED          
+   OFDM 24           |  64                |  1                 |  FAILED          
+   OFDM 24           |  64                |  2                 |  FAILED          
+   OFDM 24           |  100               |  1                 |  FAILED          
+   OFDM 24           |  100               |  2                 |  FAILED          
+   OFDM 24           |  124               |  1                 |  FAILED          
+   OFDM 24           |  124               |  2                 |  FAILED          
+   OFDM 24           |  149               |  1                 |  FAILED          
+   OFDM 24           |  149               |  2                 |  FAILED          
+   OFDM 24           |  161               |  1                 |  FAILED          
+   OFDM 24           |  161               |  2                 |  FAILED          
+   OFDM 36           |  36                |  1                 |  FAILED          
+   OFDM 36           |  36                |  2                 |  FAILED          
+   OFDM 36           |  64                |  1                 |  FAILED          
+   OFDM 36           |  64                |  2                 |  FAILED          
+   OFDM 36           |  100               |  1                 |  FAILED          
+   OFDM 36           |  100               |  2                 |  FAILED          
+   OFDM 36           |  124               |  1                 |  FAILED          
+   OFDM 36           |  124               |  2                 |  FAILED          
+   OFDM 36           |  149               |  1                 |  FAILED          
+   OFDM 36           |  149               |  2                 |  FAILED          
+   OFDM 36           |  161               |  1                 |  FAILED          
+   OFDM 36           |  161               |  2                 |  FAILED          
+   OFDM 48           |  36                |  1                 |  FAILED          
+   OFDM 48           |  36                |  2                 |  FAILED          
+   OFDM 48           |  64                |  1                 |  FAILED          
+   OFDM 48           |  64                |  2                 |  FAILED          
+   OFDM 48           |  100               |  1                 |  FAILED          
+   OFDM 48           |  100               |  2                 |  FAILED          
+   OFDM 48           |  124               |  1                 |  FAILED          0.218 sec
+   OFDM 48           |  124               |  2                 |  FAILED          0.231 sec
+   OFDM 48           |  149               |  1                 |  FAILED          5.208 sec
+   OFDM 48           |  149               |  2                 |  FAILED          5.236 sec
+   OFDM 48           |  161               |  1                 |  FAILED          5.227 sec
+   OFDM 48           |  161               |  2                 |  FAILED          5.225 sec
+   OFDM 54           |  36                |  1                 |  FAILED          0.227 sec
+   OFDM 54           |  36                |  2                 |  FAILED          0.222 sec
+   OFDM 54           |  64                |  1                 |  FAILED          0.209 sec
+   OFDM 54           |  64                |  2                 |  FAILED          0.235 sec
+   OFDM 54           |  100               |  1                 |  FAILED          0.253 sec
+   OFDM 54           |  100               |  2                 |  FAILED          0.208 sec
+   OFDM 54           |  124               |  1                 |  FAILED          0.234 sec
+   OFDM 54           |  124               |  2                 |  FAILED          0.23 sec
+   OFDM 54           |  149               |  1                 |  FAILED          5.225 sec
+   OFDM 54           |  149               |  2                 |  FAILED          5.223 sec
+   OFDM 54           |  161               |  1                 |  FAILED          5.187 sec
+   OFDM 54           |  161               |  2                 |  FAILED          5.207 sec
+ 
+ 3. 802.11n Transmitter Test:  BAND 2.4G                          FAILED
+   TX Ant            |  Data Rate         |  Channel           |  
+   1                 |  MCS0              |  1                 |  PASS          20.274 sec
+   1                 |  MCS0              |  7                 |  PASS          0.262 sec
+   1                 |  MCS0              |  11                |  PASS          0.263 sec
+   1                 |  MCS1              |  1                 |  PASS          0.236 sec
+   1                 |  MCS1              |  7                 |  PASS          0.256 sec
+   1                 |  MCS1              |  11                |  PASS          0.228 sec
+   1                 |  MCS2              |  1                 |  PASS          0.226 sec
+   1                 |  MCS2              |  7                 |  PASS          0.242 sec
+   1                 |  MCS2              |  11                |  PASS          
+   1                 |  MCS3              |  1                 |  PASS          
+   1                 |  MCS3              |  7                 |  PASS          
+   1                 |  MCS3              |  11                |  PASS          
+   1                 |  MCS4              |  1                 |  PASS          
+   1                 |  MCS4              |  7                 |  PASS          
+   1                 |  MCS4              |  11                |  PASS          
+   1                 |  MCS5              |  1                 |  PASS          
+   1                 |  MCS5              |  7                 |  PASS          
+   1                 |  MCS5              |  11                |  PASS          
+   1                 |  MCS6              |  1                 |  PASS          
+   1                 |  MCS6              |  7                 |  PASS          
+   1                 |  MCS6              |  11                |  PASS          
+   1                 |  MCS7              |  1                 |  PASS          
+   1                 |  MCS7              |  7                 |  PASS          
+   1                 |  MCS7              |  11                |  PASS          
+   1                 |  MCS8              |  1                 |  FAILED        
+   1                 |  MCS8              |  7                 |  FAILED        
+   1                 |  MCS8              |  11                |  FAILED        
+   1                 |  MCS9              |  1                 |  FAILED        
+   1                 |  MCS9              |  7                 |  FAILED        
+   1                 |  MCS9              |  11                |  FAILED        
+   1                 |  MCS10             |  1                 |  FAILED        
+   1                 |  MCS10             |  7                 |  FAILED        
+   1                 |  MCS10             |  11                |  FAILED        
+   1                 |  MCS11             |  1                 |  FAILED        
+   1                 |  MCS11             |  7                 |  FAILED        
+   1                 |  MCS11             |  11                |  FAILED        
+   2                 |  MCS0              |  1                 |  PASS          
+   2                 |  MCS0              |  7                 |  FAILED        
+   2                 |  MCS0              |  11                |  PASS          
+   2                 |  MCS1              |  1                 |  PASS          
+   2                 |  MCS1              |  7                 |  FAILED        
+   2                 |  MCS1              |  11                |  PASS          
+   2                 |  MCS2              |  1                 |  PASS          
+   2                 |  MCS2              |  7                 |  FAILED        
+   2                 |  MCS2              |  11                |  PASS          
+   2                 |  MCS3              |  1                 |  PASS          
+   2                 |  MCS3              |  7                 |  PASS          
+   2                 |  MCS3              |  11                |  PASS          
+   2                 |  MCS4              |  1                 |  PASS          
+   2                 |  MCS4              |  7                 |  PASS          
+   2                 |  MCS4              |  11                |  PASS          0.236 sec
+   2                 |  MCS5              |  1                 |  PASS          0.226 sec
+   2                 |  MCS5              |  7                 |  PASS          0.237 sec
+   2                 |  MCS5              |  11                |  PASS          0.236 sec
+   2                 |  MCS6              |  1                 |  PASS          0.206 sec
+   2                 |  MCS6              |  7                 |  PASS          0.224 sec
+   2                 |  MCS6              |  11                |  PASS          0.213 sec
+   2                 |  MCS7              |  1                 |  PASS          0.232 sec
+   2                 |  MCS7              |  7                 |  PASS          0.233 sec
+   2                 |  MCS7              |  11                |  PASS          0.257 sec
+   2                 |  MCS8              |  1                 |  FAILED          5.174 sec
+   2                 |  MCS8              |  7                 |  FAILED          5.192 sec
+   2                 |  MCS8              |  11                |  FAILED          5.198 sec
+   2                 |  MCS9              |  1                 |  FAILED          5.163 sec
+   2                 |  MCS9              |  7                 |  FAILED          5.167 sec
+   2                 |  MCS9              |  11                |  FAILED          5.172 sec
+   2                 |  MCS10             |  1                 |  FAILED          0.033 sec
+   2                 |  MCS10             |  7                 |  FAILED          0.026 sec
+   2                 |  MCS10             |  11                |  FAILED          0.028 sec
+   2                 |  MCS11             |  1                 |  FAILED          0.025 sec
+   2                 |  MCS11             |  7                 |  FAILED          0.024 sec
+   2                 |  MCS11             |  11                |  FAILED          0.026 sec
+ 
+ 4. 802.11n Transmitter Test:  BAND 5G                            FAILED
+   Channel           |  Data Rate         |  TX Ant            |  
+   36                |  MCS0              |  1                 |  FAILED          20.327 sec
+   36                |  MCS0              |  2                 |  FAILED          0.264 sec
+   36                |  MCS1              |  1                 |  FAILED          0.254 sec
+   36                |  MCS1              |  2                 |  FAILED          0.264 sec
+   36                |  MCS2              |  1                 |  FAILED          0.247 sec
+   36                |  MCS2              |  2                 |  FAILED          0.215 sec
+   36                |  MCS3              |  1                 |  FAILED          0.227 sec
+   36                |  MCS3              |  2                 |  FAILED          0.223 sec
+   36                |  MCS4              |  1                 |  FAILED          0.234 sec
+   36                |  MCS4              |  2                 |  FAILED          0.212 sec
+   36                |  MCS5              |  1                 |  FAILED          0.204 sec
+   36                |  MCS5              |  2                 |  FAILED          0.208 sec
+   36                |  MCS6              |  1                 |  FAILED          0.226 sec
+   36                |  MCS6              |  2                 |  FAILED          0.206 sec
+   36                |  MCS7              |  1                 |  FAILED          0.272 sec
+   36                |  MCS7              |  2                 |  FAILED          0.221 sec
+   36                |  MCS8              |  1                 |  FAILED          5.172 sec
+   36                |  MCS8              |  2                 |  FAILED          5.151 sec
+   36                |  MCS9              |  1                 |  FAILED          5.158 sec
+   36                |  MCS9              |  2                 |  FAILED          5.168 sec
+   36                |  MCS10             |  1                 |  FAILED          0.031 sec
+   36                |  MCS10             |  2                 |  FAILED          0.024 sec
+   36                |  MCS11             |  1                 |  FAILED          0.028 sec
+   36                |  MCS11             |  2                 |  FAILED          0.024 sec
+   64                |  MCS0              |  1                 |  FAILED          0.25 sec
+   64                |  MCS0              |  2                 |  FAILED          0.295 sec
+   64                |  MCS1              |  1                 |  FAILED          0.244 sec
+   64                |  MCS1              |  2                 |  FAILED          0.232 sec
+   64                |  MCS2              |  1                 |  FAILED          0.252 sec
+   64                |  MCS2              |  2                 |  FAILED          0.243 sec
+   64                |  MCS3              |  1                 |  FAILED          0.234 sec
+   64                |  MCS3              |  2                 |  FAILED          0.247 sec
+   64                |  MCS4              |  1                 |  FAILED          0.222 sec
+   64                |  MCS4              |  2                 |  FAILED          0.227 sec
+   64                |  MCS5              |  1                 |  FAILED          0.206 sec
+   64                |  MCS5              |  2                 |  FAILED          0.207 sec
+   64                |  MCS6              |  1                 |  FAILED          0.242 sec
+   64                |  MCS6              |  2                 |  FAILED          0.232 sec
+   64                |  MCS7              |  1                 |  FAILED          0.216 sec
+   64                |  MCS7              |  2                 |  FAILED          0.215 sec
+   64                |  MCS8              |  1                 |  FAILED          5.185 sec
+   64                |  MCS8              |  2                 |  FAILED          5.172 sec
+   64                |  MCS9              |  1                 |  FAILED          5.163 sec
+   64                |  MCS9              |  2                 |  FAILED          5.168 sec
+   64                |  MCS10             |  1                 |  FAILED          0.031 sec
+   64                |  MCS10             |  2                 |  FAILED          0.029 sec
+   64                |  MCS11             |  1                 |  FAILED          0.026 sec
+   64                |  MCS11             |  2                 |  FAILED          0.029 sec
+   100               |  MCS0              |  1                 |  FAILED          0.247 sec
+   100               |  MCS0              |  2                 |  FAILED          0.245 sec
+   100               |  MCS1              |  1                 |  FAILED          0.218 sec
+   100               |  MCS1              |  2                 |  FAILED          0.232 sec
+   100               |  MCS2              |  1                 |  FAILED          0.244 sec
+   100               |  MCS2              |  2                 |  FAILED          0.243 sec
+   100               |  MCS3              |  1                 |  FAILED          0.231 sec
+   100               |  MCS3              |  2                 |  FAILED          0.217 sec
+   100               |  MCS4              |  1                 |  FAILED          0.243 sec
+   100               |  MCS4              |  2                 |  FAILED          0.243 sec
+   100               |  MCS5              |  1                 |  FAILED          0.208 sec
+   100               |  MCS5              |  2                 |  FAILED          0.226 sec
+   100               |  MCS6              |  1                 |  FAILED          0.223 sec
+   100               |  MCS6              |  2                 |  FAILED          0.213 sec
+   100               |  MCS7              |  1                 |  FAILED          0.212 sec
+   100               |  MCS7              |  2                 |  FAILED          0.243 sec
+   100               |  MCS8              |  1                 |  FAILED          5.184 sec
+   100               |  MCS8              |  2                 |  FAILED          5.157 sec
+   100               |  MCS9              |  1                 |  FAILED          5.174 sec
+   100               |  MCS9              |  2                 |  FAILED          5.173 sec
+   100               |  MCS10             |  1                 |  FAILED          0.035 sec
+   100               |  MCS10             |  2                 |  FAILED          0.029 sec
+   100               |  MCS11             |  1                 |  FAILED          0.025 sec
+   100               |  MCS11             |  2                 |  FAILED          0.025 sec
+   124               |  MCS0              |  1                 |  FAILED          0.252 sec
+   124               |  MCS0              |  2                 |  FAILED          0.247 sec
+   124               |  MCS1              |  1                 |  FAILED          0.243 sec
+   124               |  MCS1              |  2                 |  FAILED          5.221 sec
+   124               |  MCS2              |  1                 |  FAILED          0.244 sec
+   124               |  MCS2              |  2                 |  FAILED          5.205 sec
+   124               |  MCS3              |  1                 |  FAILED          0.245 sec
+   124               |  MCS3              |  2                 |  FAILED          5.212 sec
+   124               |  MCS4              |  1                 |  FAILED          0.206 sec
+   124               |  MCS4              |  2                 |  FAILED          5.187 sec
+   124               |  MCS5              |  1                 |  FAILED          0.199 sec
+   124               |  MCS5              |  2                 |  FAILED          5.207 sec
+   124               |  MCS6              |  1                 |  FAILED          0.209 sec
+   124               |  MCS6              |  2                 |  FAILED          5.197 sec
+   124               |  MCS7              |  1                 |  FAILED          0.227 sec
+   124               |  MCS7              |  2                 |  FAILED          5.205 sec
+   124               |  MCS8              |  1                 |  FAILED          5.198 sec
+   124               |  MCS8              |  2                 |  FAILED          5.174 sec
+   124               |  MCS9              |  1                 |  FAILED          5.187 sec
+   124               |  MCS9              |  2                 |  FAILED          5.169 sec
+   124               |  MCS10             |  1                 |  FAILED          0.03 sec
+   124               |  MCS10             |  2                 |  FAILED          0.025 sec
+   124               |  MCS11             |  1                 |  FAILED          0.027 sec
+   124               |  MCS11             |  2                 |  FAILED          0.025 sec
+   140               |  MCS0              |  1                 |  FAILED          5.176 sec
+   140               |  MCS0              |  2                 |  FAILED          5.216 sec
+   140               |  MCS1              |  1                 |  FAILED          5.197 sec
+   140               |  MCS1              |  2                 |  FAILED          5.196 sec
+   140               |  MCS2              |  1                 |  FAILED          5.243 sec
+   140               |  MCS2              |  2                 |  FAILED          5.177 sec
+   140               |  MCS3              |  1                 |  FAILED          5.178 sec
+   140               |  MCS3              |  2                 |  FAILED          5.202 sec
+   140               |  MCS4              |  1                 |  FAILED          5.194 sec
+   140               |  MCS4              |  2                 |  FAILED          5.219 sec
+   140               |  MCS5              |  1                 |  FAILED          5.234 sec
+   140               |  MCS5              |  2                 |  FAILED          5.199 sec
+   140               |  MCS6              |  1                 |  FAILED          5.223 sec
+   140               |  MCS6              |  2                 |  FAILED          5.21 sec
+   140               |  MCS7              |  1                 |  FAILED          5.177 sec
+   140               |  MCS7              |  2                 |  FAILED          5.205 sec
+   140               |  MCS8              |  1                 |  FAILED          5.175 sec
+   140               |  MCS8              |  2                 |  FAILED          5.173 sec
+   140               |  MCS9              |  1                 |  FAILED          5.159 sec
+   140               |  MCS9              |  2                 |  FAILED          5.179 sec
+   140               |  MCS10             |  1                 |  FAILED          0.025 sec
+   140               |  MCS10             |  2                 |  FAILED          0.024 sec
+   140               |  MCS11             |  1                 |  FAILED          0.027 sec
+   140               |  MCS11             |  2                 |  FAILED          0.025 sec
+   161               |  MCS0              |  1                 |  FAILED          5.211 sec
+   161               |  MCS0              |  2                 |  FAILED          5.217 sec
+   161               |  MCS1              |  1                 |  FAILED          5.216 sec
+   161               |  MCS1              |  2                 |  FAILED          5.215 sec
+   161               |  MCS2              |  1                 |  FAILED          5.184 sec
+   161               |  MCS2              |  2                 |  FAILED          5.198 sec
+   161               |  MCS3              |  1                 |  FAILED          5.195 sec
+   161               |  MCS3              |  2                 |  FAILED          5.203 sec
+   161               |  MCS4              |  1                 |  FAILED          5.207 sec
+   161               |  MCS4              |  2                 |  FAILED          5.206 sec
+   161               |  MCS5              |  1                 |  FAILED          5.197 sec
+   161               |  MCS5              |  2                 |  FAILED          5.205 sec
+   161               |  MCS6              |  1                 |  FAILED          5.188 sec
+   161               |  MCS6              |  2                 |  FAILED          5.209 sec
+   161               |  MCS7              |  1                 |  FAILED          5.203 sec
+   161               |  MCS7              |  2                 |  FAILED          5.198 sec
+   161               |  MCS8              |  1                 |  FAILED          5.197 sec
+   161               |  MCS8              |  2                 |  FAILED          5.144 sec
+   161               |  MCS9              |  1                 |  FAILED          5.164 sec
+   161               |  MCS9              |  2                 |  FAILED          5.171 sec
+   161               |  MCS10             |  1                 |  FAILED          0.042 sec
+   161               |  MCS10             |  2                 |  FAILED          0.032 sec
+   161               |  MCS11             |  1                 |  FAILED          0.029 sec
+   161               |  MCS11             |  2                 |  FAILED          0.028 sec
+ 
+ Duration Time: 675.703 sec
+ 
+ 
+
+Running Flow File 2 [CL6_RX_Flow.flow the flow checks for sensitivity point with power from (-20 to -80, with -1 step) and no. of failed iterations of 3the tests also iterates over antenas, Data-Rates and channels tests on 11.ag & 11.ax on 2.4G, 11.ax on 5G]:	Pass
+
+ 1. 802.11ag Receiver Test:  BAND 2.4G                            PASS
+   Data Rate         |  RX Ant            |  Channel           |  
+   OFDM 6            |  1                 |  1                 |  PASS          44.329 sec
+   OFDM 6            |  1                 |  7                 |  PASS          24.448 sec
+   OFDM 6            |  1                 |  11                |  PASS          24.335 sec
+   OFDM 6            |  2                 |  1                 |  PASS          10.234 sec
+   OFDM 6            |  2                 |  7                 |  PASS          10.322 sec
+   OFDM 6            |  2                 |  11                |  PASS          10.227 sec
+   OFDM 9            |  1                 |  1                 |  PASS          15.545 sec
+   OFDM 9            |  1                 |  7                 |  PASS          15.364 sec
+   OFDM 9            |  1                 |  11                |  PASS          15.433 sec
+   OFDM 9            |  2                 |  1                 |  PASS          15.274 sec
+   OFDM 9            |  2                 |  7                 |  PASS          15.459 sec
+   OFDM 9            |  2                 |  11                |  PASS          15.402 sec
+   OFDM 12           |  1                 |  1                 |  PASS          11.207 sec
+   OFDM 12           |  1                 |  7                 |  PASS          10.926 sec
+   OFDM 12           |  1                 |  11                |  PASS          10.935 sec
+   OFDM 12           |  2                 |  1                 |  PASS          11.062 sec
+   OFDM 12           |  2                 |  7                 |  PASS          10.565 sec
+   OFDM 12           |  2                 |  11                |  PASS          10.962 sec
+   OFDM 18           |  1                 |  1                 |  PASS          11.084 sec
+   OFDM 18           |  1                 |  7                 |  PASS          10.896 sec
+   OFDM 18           |  1                 |  11                |  PASS          10.952 sec
+   OFDM 18           |  2                 |  1                 |  PASS          10.907 sec
+   OFDM 18           |  2                 |  7                 |  PASS          10.897 sec
+   OFDM 18           |  2                 |  11                |  PASS          10.832 sec
+   OFDM 24           |  1                 |  1                 |  PASS          11.07 sec
+   OFDM 24           |  1                 |  7                 |  PASS          10.852 sec
+   OFDM 24           |  1                 |  11                |  PASS          10.889 sec
+   OFDM 24           |  2                 |  1                 |  PASS          1.713 sec
+   OFDM 24           |  2                 |  7                 |  PASS          1.71 sec
+   OFDM 24           |  2                 |  11                |  PASS          1.624 sec
+   OFDM 36           |  1                 |  1                 |  PASS          7.828 sec
+   OFDM 36           |  1                 |  7                 |  PASS          7.269 sec
+   OFDM 36           |  1                 |  11                |  PASS          7.637 sec
+   OFDM 36           |  2                 |  1                 |  PASS          1.203 sec
+   OFDM 36           |  2                 |  7                 |  PASS          1.351 sec
+   OFDM 36           |  2                 |  11                |  PASS          0.999 sec
+   OFDM 48           |  1                 |  1                 |  PASS          5.341 sec
+   OFDM 48           |  1                 |  7                 |  PASS          5.721 sec
+   OFDM 48           |  1                 |  11                |  PASS          5.682 sec
+   OFDM 48           |  2                 |  1                 |  PASS          0.617 sec
+   OFDM 48           |  2                 |  7                 |  PASS          0.59 sec
+   OFDM 48           |  2                 |  11                |  PASS          0.555 sec
+   OFDM 54           |  1                 |  1                 |  PASS          5.815 sec
+   OFDM 54           |  1                 |  7                 |  PASS          5.334 sec
+   OFDM 54           |  1                 |  11                |  PASS          5.569 sec
+   OFDM 54           |  2                 |  1                 |  PASS          0.528 sec
+   OFDM 54           |  2                 |  7                 |  PASS          0.529 sec
+   OFDM 54           |  2                 |  11                |  PASS          0.55 sec
+ 
+ 2. 802.11ax Receiver Test:  BAND 2.4G                            PASS
+   Channel           |  RX Ant            |  Data Rate         |  
+   1                 |  1                 |  MCS0              |  PASS          9.184 sec
+   1                 |  1                 |  MCS1              |  PASS          3.928 sec
+   1                 |  1                 |  MCS2              |  PASS          3.935 sec
+   1                 |  1                 |  MCS3              |  PASS          4.187 sec
+   1                 |  1                 |  MCS4              |  PASS          2.809 sec
+   1                 |  1                 |  MCS5              |  PASS          2.381 sec
+   1                 |  1                 |  MCS6              |  PASS          2.442 sec
+   1                 |  1                 |  MCS7              |  PASS          2.513 sec
+   1                 |  1                 |  MCS8              |  PASS          0.672 sec
+   1                 |  1                 |  MCS9              |  PASS          0.71 sec
+   1                 |  1                 |  MCS10             |  PASS          0.691 sec
+   1                 |  1                 |  MCS11             |  PASS          0.695 sec
+   1                 |  2                 |  MCS0              |  PASS          9.004 sec
+   1                 |  2                 |  MCS1              |  PASS          4.06 sec
+   1                 |  2                 |  MCS2              |  PASS          4.101 sec
+   1                 |  2                 |  MCS3              |  PASS          4 sec
+   1                 |  2                 |  MCS4              |  PASS          2.922 sec
+   1                 |  2                 |  MCS5              |  PASS          2.31 sec
+   1                 |  2                 |  MCS6              |  PASS          2.318 sec
+   1                 |  2                 |  MCS7              |  PASS          2.285 sec
+   1                 |  2                 |  MCS8              |  PASS          0.57 sec
+   1                 |  2                 |  MCS9              |  PASS          0.592 sec
+   1                 |  2                 |  MCS10             |  PASS          0.575 sec
+   1                 |  2                 |  MCS11             |  PASS          0.57 sec
+   7                 |  1                 |  MCS0              |  PASS          9.035 sec
+   7                 |  1                 |  MCS1              |  PASS          3.83 sec
+   7                 |  1                 |  MCS2              |  PASS          4.054 sec
+   7                 |  1                 |  MCS3              |  PASS          3.81 sec
+   7                 |  1                 |  MCS4              |  PASS          2.803 sec
+   7                 |  1                 |  MCS5              |  PASS          2.426 sec
+   7                 |  1                 |  MCS6              |  PASS          2.272 sec
+   7                 |  1                 |  MCS7              |  PASS          2.352 sec
+   7                 |  1                 |  MCS8              |  PASS          0.554 sec
+   7                 |  1                 |  MCS9              |  PASS          0.555 sec
+   7                 |  1                 |  MCS10             |  PASS          0.551 sec
+   7                 |  1                 |  MCS11             |  PASS          0.558 sec
+   7                 |  2                 |  MCS0              |  PASS          8.978 sec
+   7                 |  2                 |  MCS1              |  PASS          3.984 sec
+   7                 |  2                 |  MCS2              |  PASS          3.751 sec
+   7                 |  2                 |  MCS3              |  PASS          3.775 sec
+   7                 |  2                 |  MCS4              |  PASS          2.757 sec
+   7                 |  2                 |  MCS5              |  PASS          2.302 sec
+   7                 |  2                 |  MCS6              |  PASS          2.47 sec
+   7                 |  2                 |  MCS7              |  PASS          2.252 sec
+   7                 |  2                 |  MCS8              |  PASS          0.542 sec
+   7                 |  2                 |  MCS9              |  PASS          0.567 sec
+   7                 |  2                 |  MCS10             |  PASS          0.569 sec
+   7                 |  2                 |  MCS11             |  PASS          0.539 sec
+   11                |  1                 |  MCS0              |  PASS          8.394 sec
+   11                |  1                 |  MCS1              |  PASS          3.815 sec
+   11                |  1                 |  MCS2              |  PASS          2.514 sec
+   11                |  1                 |  MCS3              |  PASS          3.82 sec
+   11                |  1                 |  MCS4              |  PASS          2.741 sec
+   11                |  1                 |  MCS5              |  PASS          2.315 sec
+   11                |  1                 |  MCS6              |  PASS          2.299 sec
+   11                |  1                 |  MCS7              |  PASS          2.314 sec
+   11                |  1                 |  MCS8              |  PASS          0.581 sec
+   11                |  1                 |  MCS9              |  PASS          0.57 sec
+   11                |  1                 |  MCS10             |  PASS          0.574 sec
+   11                |  1                 |  MCS11             |  PASS          0.569 sec
+   11                |  2                 |  MCS0              |  PASS          8.37 sec
+   11                |  2                 |  MCS1              |  PASS          4.068 sec
+   11                |  2                 |  MCS2              |  PASS          3.742 sec
+   11                |  2                 |  MCS3              |  PASS          4.046 sec
+   11                |  2                 |  MCS4              |  PASS          2.734 sec
+   11                |  2                 |  MCS5              |  PASS          2.45 sec
+   11                |  2                 |  MCS6              |  PASS          2.457 sec
+   11                |  2                 |  MCS7              |  PASS          2.439 sec
+   11                |  2                 |  MCS8              |  PASS          0.578 sec
+   11                |  2                 |  MCS9              |  PASS          0.527 sec
+   11                |  2                 |  MCS10             |  PASS          0.571 sec
+   11                |  2                 |  MCS11             |  PASS          0.562 sec
+ 
+ 3. 802.11ax Receiver Test:  BAND 5G                              PASS
+   Channel           |  Data Rate         |  RX Ant            |  
+   36                |  MCS0              |  1                 |  PASS          22.315 sec
+   36                |  MCS0              |  2                 |  PASS          35.54 sec
+   36                |  MCS1              |  1                 |  PASS          0.899 sec
+   36                |  MCS1              |  2                 |  PASS          15.389 sec
+   36                |  MCS2              |  1                 |  PASS          0.903 sec
+   36                |  MCS2              |  2                 |  PASS          15.006 sec
+   36                |  MCS3              |  1                 |  PASS          0.854 sec
+   36                |  MCS3              |  2                 |  PASS          14.046 sec
+   36                |  MCS4              |  1                 |  PASS          0.689 sec
+   36                |  MCS4              |  2                 |  PASS          0.683 sec
+   36                |  MCS5              |  1                 |  PASS          0.541 sec
+   36                |  MCS5              |  2                 |  PASS          0.557 sec
+   36                |  MCS6              |  1                 |  PASS          0.577 sec
+   36                |  MCS6              |  2                 |  PASS          0.554 sec
+   36                |  MCS7              |  1                 |  PASS          0.544 sec
+   36                |  MCS7              |  2                 |  PASS          0.582 sec
+   36                |  MCS8              |  1                 |  PASS          0.558 sec
+   36                |  MCS8              |  2                 |  PASS          0.552 sec
+   36                |  MCS9              |  1                 |  PASS          0.572 sec
+   36                |  MCS9              |  2                 |  PASS          0.537 sec
+   36                |  MCS10             |  1                 |  PASS          0.575 sec
+   36                |  MCS10             |  2                 |  PASS          0.525 sec
+   36                |  MCS11             |  1                 |  PASS          0.576 sec
+   36                |  MCS11             |  2                 |  PASS          0.556 sec
+   64                |  MCS0              |  1                 |  PASS          29.063 sec
+   64                |  MCS0              |  2                 |  PASS          28.659 sec
+   64                |  MCS1              |  1                 |  PASS          12.745 sec
+   64                |  MCS1              |  2                 |  PASS          12.522 sec
+   64                |  MCS2              |  1                 |  PASS          12.253 sec
+   64                |  MCS2              |  2                 |  PASS          11.704 sec
+   64                |  MCS3              |  1                 |  PASS          11.293 sec
+   64                |  MCS3              |  2                 |  PASS          10.926 sec
+   64                |  MCS4              |  1                 |  PASS          6.95 sec
+   64                |  MCS4              |  2                 |  PASS          7.287 sec
+   64                |  MCS5              |  1                 |  PASS          5.265 sec
+   64                |  MCS5              |  2                 |  PASS          5.113 sec
+   64                |  MCS6              |  1                 |  PASS          5.063 sec
+   64                |  MCS6              |  2                 |  PASS          4.732 sec
+   64                |  MCS7              |  1                 |  PASS          0.548 sec
+   64                |  MCS7              |  2                 |  PASS          0.541 sec
+   64                |  MCS8              |  1                 |  PASS          0.577 sec
+   64                |  MCS8              |  2                 |  PASS          0.516 sec
+   64                |  MCS9              |  1                 |  PASS          0.557 sec
+   64                |  MCS9              |  2                 |  PASS          0.559 sec
+   64                |  MCS10             |  1                 |  PASS          0.559 sec
+   64                |  MCS10             |  2                 |  PASS          0.529 sec
+   64                |  MCS11             |  1                 |  PASS          0.561 sec
+   64                |  MCS11             |  2                 |  PASS          0.56 sec
+   100               |  MCS0              |  1                 |  PASS          17.295 sec
+   100               |  MCS0              |  2                 |  PASS          22.046 sec
+   100               |  MCS1              |  1                 |  PASS          7.466 sec
+   100               |  MCS1              |  2                 |  PASS          9.268 sec
+   100               |  MCS2              |  1                 |  PASS          6.778 sec
+   100               |  MCS2              |  2                 |  PASS          8.726 sec
+   100               |  MCS3              |  1                 |  PASS          5.845 sec
+   100               |  MCS3              |  2                 |  PASS          7.722 sec
+   100               |  MCS4              |  1                 |  PASS          3.611 sec
+   100               |  MCS4              |  2                 |  PASS          4.49 sec
+   100               |  MCS5              |  1                 |  PASS          2.094 sec
+   100               |  MCS5              |  2                 |  PASS          3.186 sec
+   100               |  MCS6              |  1                 |  PASS          1.77 sec
+   100               |  MCS6              |  2                 |  PASS          2.891 sec
+   100               |  MCS7              |  1                 |  PASS          1.493 sec
+   100               |  MCS7              |  2                 |  PASS          2.585 sec
+   100               |  MCS8              |  1                 |  PASS          0.576 sec
+   100               |  MCS8              |  2                 |  PASS          0.536 sec
+   100               |  MCS9              |  1                 |  PASS          0.582 sec
+   100               |  MCS9              |  2                 |  PASS          0.57 sec
+   100               |  MCS10             |  1                 |  PASS          0.579 sec
+   100               |  MCS10             |  2                 |  PASS          0.55 sec
+   100               |  MCS11             |  1                 |  PASS          0.559 sec
+   100               |  MCS11             |  2                 |  PASS          0.537 sec
+   124               |  MCS0              |  1                 |  PASS          20.215 sec
+   124               |  MCS0              |  2                 |  PASS          21.456 sec
+   124               |  MCS1              |  1                 |  PASS          8.903 sec
+   124               |  MCS1              |  2                 |  PASS          9.066 sec
+   124               |  MCS2              |  1                 |  PASS          8.1 sec
+   124               |  MCS2              |  2                 |  PASS          8.537 sec
+   124               |  MCS3              |  1                 |  PASS          7.253 sec
+   124               |  MCS3              |  2                 |  PASS          7.536 sec
+   124               |  MCS4              |  1                 |  PASS          4.385 sec
+   124               |  MCS4              |  2                 |  PASS          4.946 sec
+   124               |  MCS5              |  1                 |  PASS          2.893 sec
+   124               |  MCS5              |  2                 |  PASS          3.072 sec
+   124               |  MCS6              |  1                 |  PASS          2.581 sec
+   124               |  MCS6              |  2                 |  PASS          2.739 sec
+   124               |  MCS7              |  1                 |  PASS          1.944 sec
+   124               |  MCS7              |  2                 |  PASS          2.408 sec
+   124               |  MCS8              |  1                 |  PASS          0.567 sec
+   124               |  MCS8              |  2                 |  PASS          0.561 sec
+   124               |  MCS9              |  1                 |  PASS          0.545 sec
+   124               |  MCS9              |  2                 |  PASS          0.557 sec
+   124               |  MCS10             |  1                 |  PASS          0.562 sec
+   124               |  MCS10             |  2                 |  PASS          0.548 sec
+   124               |  MCS11             |  1                 |  PASS          0.551 sec
+   124               |  MCS11             |  2                 |  PASS          0.569 sec
+   149               |  MCS0              |  1                 |  PASS          19.823 sec
+   149               |  MCS0              |  2                 |  PASS          20.747 sec
+   149               |  MCS1              |  1                 |  PASS          8.652 sec
+   149               |  MCS1              |  2                 |  PASS          8.766 sec
+   149               |  MCS2              |  1                 |  PASS          7.788 sec
+   149               |  MCS2              |  2                 |  PASS          7.986 sec
+   149               |  MCS3              |  1                 |  PASS          6.98 sec
+   149               |  MCS3              |  2                 |  PASS          7.236 sec
+   149               |  MCS4              |  1                 |  PASS          4.081 sec
+   149               |  MCS4              |  2                 |  PASS          4.152 sec
+   149               |  MCS5              |  1                 |  PASS          2.578 sec
+   149               |  MCS5              |  2                 |  PASS          2.849 sec
+   149               |  MCS6              |  1                 |  PASS          2.457 sec
+   149               |  MCS6              |  2                 |  PASS          2.542 sec
+   149               |  MCS7              |  1                 |  PASS          1.782 sec
+   149               |  MCS7              |  2                 |  PASS          1.973 sec
+   149               |  MCS8              |  1                 |  PASS          0.551 sec
+   149               |  MCS8              |  2                 |  PASS          0.584 sec
+   149               |  MCS9              |  1                 |  PASS          0.55 sec
+   149               |  MCS9              |  2                 |  PASS          0.542 sec
+   149               |  MCS10             |  1                 |  PASS          0.559 sec
+   149               |  MCS10             |  2                 |  PASS          0.551 sec
+   149               |  MCS11             |  1                 |  PASS          0.553 sec
+   149               |  MCS11             |  2                 |  PASS          0.568 sec
+   161               |  MCS0              |  1                 |  PASS          19.134 sec
+   161               |  MCS0              |  2                 |  PASS          19.653 sec
+   161               |  MCS1              |  1                 |  PASS          8.217 sec
+   161               |  MCS1              |  2                 |  PASS          8.3 sec
+   161               |  MCS2              |  1                 |  PASS          7.442 sec
+   161               |  MCS2              |  2                 |  PASS          7.739 sec
+   161               |  MCS3              |  1                 |  PASS          6.398 sec
+   161               |  MCS3              |  2                 |  PASS          6.705 sec
+   161               |  MCS4              |  1                 |  PASS          3.911 sec
+   161               |  MCS4              |  2                 |  PASS          4.09 sec
+   161               |  MCS5              |  1                 |  PASS          2.453 sec
+   161               |  MCS5              |  2                 |  PASS          2.598 sec
+   161               |  MCS6              |  1                 |  PASS          2.078 sec
+   161               |  MCS6              |  2                 |  PASS          2.305 sec
+   161               |  MCS7              |  1                 |  PASS          1.643 sec
+   161               |  MCS7              |  2                 |  PASS          1.646 sec
+   161               |  MCS8              |  1                 |  PASS          0.562 sec
+   161               |  MCS8              |  2                 |  PASS          0.579 sec
+   161               |  MCS9              |  1                 |  PASS          0.507 sec
+   161               |  MCS9              |  2                 |  PASS          0.525 sec
+   161               |  MCS10             |  1                 |  PASS          0.539 sec
+   161               |  MCS10             |  2                 |  PASS          0.546 sec
+   161               |  MCS11             |  1                 |  PASS          0.581 sec
+   161               |  MCS11             |  2                 |  PASS          0.536 sec
+ 
+ Duration Time: 1385.242 sec
+ 
+ 
+
+Running Uninstaller check [this test checks for uninstalling the iqdvt correctly]: Failed
+
