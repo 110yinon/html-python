@@ -22,6 +22,7 @@
 }
 .summary, .sub-test{
     grid-column:  span 6;
+    border-bottom: 1px solid black;
 }
 .test-name{    
     grid-column: span 5;
